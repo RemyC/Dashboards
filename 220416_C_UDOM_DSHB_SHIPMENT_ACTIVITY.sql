@@ -1,4 +1,4 @@
-"SELECT
+SELECT
 	shipth.tc_shipment_id															as tc_shipment_id
 	, substr(shipth.tc_shipment_id, 1, length(shipth.tc_shipment_id)-5)				as tc_shipment_id_left
 	, substr(shipth.tc_shipment_id, -5 )											as tc_shipment_id_right
@@ -336,4 +336,4 @@ AND TRUNC(shipth.pickup_start_dttm) BETWEEN TRUNC(sysdate-4) AND
         )
 */
 --AND ( locnh.dsp_locn <> 'BTB-ANC-NAV' OR locnh.dsp_locn IS NULL )
-AND NOT lpn_advancing.loading_advancement IS NULL"
+AND NOT lpn_advancing.loading_advancement IS NULL
